@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "suoermod",
+  "version": "${version}",
+  "name": "SuoerMod",
+  "description": "My private utility mod",
+  "authors": ["Me!"],
+  "contact": {},
+  "license": "CC0-1.0",
+  "icon": "assets/suoermod/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.example.SuoerMod"],
+    "client": ["com.example.client.SuoerModClient"]
+  },
+  "mixins": [
+    "mixins.suoermod.json",
+    {
+      "config": "suoermod.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "minecraft": "~1.20.1",
+    "java": ">=17",
+    "fabric-api": "*"
+  }
+}
