@@ -1,4 +1,4 @@
-# SuoerMod
+# SuperMod
 
 ## Setup
 
