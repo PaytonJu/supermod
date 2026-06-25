@@ -16,7 +16,7 @@ public class ModConfig {
     public List<String> ownerNames = new ArrayList<>();
 
     public static ModConfig load() {
-        configFile = FabricLoader.getInstance().getConfigDir().resolve("suoermod.json").toFile();
+        configFile = FabricLoader.getInstance().getConfigDir().resolve("supermod.json").toFile();
         if (configFile.exists()) {
             try (Reader reader = new FileReader(configFile)) {
                 return GSON.fromJson(reader, ModConfig.class);

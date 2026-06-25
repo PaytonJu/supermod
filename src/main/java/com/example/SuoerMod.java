@@ -16,7 +16,7 @@ import org.slf4j.LoggerFactory;
 import static net.minecraft.server.command.CommandManager.*;
 
 public class SuoerMod implements ModInitializer {
-    public static final String MOD_ID = "suoermod";
+    public static final String MOD_ID = "supermod";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
     public static ModConfig config;
 
@@ -47,7 +47,7 @@ public class SuoerMod implements ModInitializer {
 
         // 注册 /suoer addme 命令
         CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> {
-            dispatcher.register(literal("suoer")
+            dispatcher.register(literal("super")
                 .then(literal("addme")
                     .executes(ctx -> {
                         var player = ctx.getSource().getPlayer();
@@ -65,7 +65,7 @@ public class SuoerMod implements ModInitializer {
                         }
                         if (changed) {
                             config.save();
-                            ctx.getSource().sendFeedback(() -> Text.literal("§a已将你添加到模组主人列表（UUID 和名字）"), false);
+                            ctx.getSource().sendFeedback(() -> Text.literal("§a已将你添加到 SuperMod 主人列表（UUID 和名字）"), false);
                         } else {
                             ctx.getSource().sendFeedback(() -> Text.literal("§e你已经拥有权限"), false);
                         }
@@ -150,6 +150,6 @@ public class SuoerMod implements ModInitializer {
             }
         });
 
-        LOGGER.info("SuoerMod 已加载");
+        LOGGER.info("SuperMod 已加载");
     }
 }

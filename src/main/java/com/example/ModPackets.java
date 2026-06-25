@@ -14,9 +14,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ModPackets {
-    public static final Identifier REQUEST_PACKET = new Identifier("suoermod", "request");
-    public static final Identifier WAYPOINTS_LIST_PACKET = new Identifier("suoermod", "waypoints_list");
-    public static final Identifier JETPACK_SPEED_PACKET = new Identifier("suoermod", "jetpack_speed");
+    public static final Identifier REQUEST_PACKET = new Identifier("supermod", "request");
+    public static final Identifier WAYPOINTS_LIST_PACKET = new Identifier("supermod", "waypoints_list");
+    public static final Identifier JETPACK_SPEED_PACKET = new Identifier("supermod", "jetpack_speed");
 
     public static void registerServerReceivers() {
         ServerPlayNetworking.registerGlobalReceiver(REQUEST_PACKET, (server, player, handler, buf, responseSender) -> {

@@ -27,10 +27,10 @@ public class SuoerModClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         openMenuKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
-                "key.suoermod.menu",
+                "key.supermod.menu",
                 InputUtil.Type.KEYSYM,
                 GLFW.GLFW_KEY_GRAVE_ACCENT,   // ~ 键
-                "category.suoermod"
+                "category.supermod"
         ));
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {

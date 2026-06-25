@@ -11,7 +11,7 @@ import net.minecraft.text.Text;
 
 public class MainMenuScreen extends Screen {
     protected MainMenuScreen() {
-        super(Text.literal("SuoerMod 面板"));
+        super(Text.literal("SuperMod 面板"));
     }
 
     @Override
